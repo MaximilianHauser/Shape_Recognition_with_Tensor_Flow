@@ -53,7 +53,7 @@ def generate_images(lst_lst, w, h, num, name, mode, labels):
         a = (rint(0,255), rint(0,255), rint(0,255))
         b = (rint(0,255), rint(0,255), rint(0,255))
         c = rint(0, len(lst_lst)-1)
-        label = "{folder}/".format(folder=labels[c]) + "{name}_".format(name=name) + "{counter}.png".format(counter=counter).zfill(10)
+        label = "images/{folder}/".format(folder=labels[c]) + "{name}_".format(name=name) + "{counter}.png".format(counter=counter).zfill(10)
         
         img = Image.new(mode, (w, h))
         input_lst = [a if x==0 else b for x in (lst_lst[c])]
